@@ -77,7 +77,7 @@ body::before {
   background-image: url(https://torokoid.github.io/20260405_utsunomiya_/20260405_003.JPG);
   
   /* 2. 次にWebPを指定（WebP対応ブラウザはここで上書きされる） */
-  background-image: url(https://torokoid.github.io/20260405_utsunomiya_/20260405_003.webp);
+  background-image: url(https://torokoid.github.io/20260406_utsunomiya_/20260405_003.webp);
 
   /* その他の共通設定 */
   background-position: center;
