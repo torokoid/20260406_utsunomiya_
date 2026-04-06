@@ -72,20 +72,14 @@ body::before {
   z-index: -1;
   width: 100%;
   height: 100vh;
-
-  /* 1. まずは従来のJPGを指定（WebP非対応ブラウザ用） */
-  background-image: url(https://github.com/torokoid/20260406_utsunomiya_/blob/main/20260405_003.JPG);
-  
-  /* 2. 次にWebPを指定（WebP対応ブラウザはここで上書きされる） */
-  background-image: url(https://github.com/torokoid/20260406_utsunomiya_/blob/main/20260406_003.webp);
-
-  /* その他の共通設定 */
+  background-image: url("https://torokoid.github.io/20260406_utsunomiya_/20260405_003.JPG");
+  background-image: url("https://torokoid.github.io/20260406_utsunomiya_/20260406_003.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-background-size: cover; /* Android4用 */
 }
-/*
+
+
 a.p:hover {
 position: relative;
 text-decoration: none;
@@ -107,7 +101,7 @@ width: 800px;
 screen and (orientation: landscape) {
 p.note { display: none; }
 }
-*/
+
 
     
 .media-container {
