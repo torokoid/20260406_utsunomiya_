@@ -63,10 +63,28 @@ animation:blink 1.5s ease-in-out infinite alternate;
 #wrap {background:none} /*PC用の背景はオフ*/
 
 /*背景を表示させる部分*/
-background-image: image-set(
-  url("https://torokoid.github.io/20260405_utsunomiya_/20260405_003.webp") type("image/webp"),
-  url("https://torokoid.github.io/20260405_utsunomiya_/20260405_003.JPG") type("image/jpeg")
-);
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+
+  /* 1. まずは従来のJPGを指定（WebP非対応ブラウザ用） */
+  background-image: url(https://torokoid.github.io/20260405_utsunomiya_/20260405_003.JPG);
+  
+  /* 2. 次にWebPを指定（WebP対応ブラウザはここで上書きされる） */
+  background-image: url(https://torokoid.github.io/20260405_utsunomiya_/20260405_003.webp);
+
+  /* その他の共通設定 */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover; /* Android4用 */
+}
 
 a.p:hover {
 position: relative;
